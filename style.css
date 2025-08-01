@@ -1,75 +1,58 @@
+/* style.css */
 body {
   font-family: 'Poppins', sans-serif;
   background: #f8f9fa;
   color: #333;
   scroll-behavior: smooth;
 }
-
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 nav.navbar {
   background-color: #1b1e23;
+  z-index: 999;
 }
-
 nav .navbar-brand {
   font-weight: 700;
   font-size: 1.3rem;
   letter-spacing: 2px;
   color: #0d6efd;
 }
-
 nav .nav-link {
   font-weight: 500;
   color: #bbb;
   position: relative;
   transition: color 0.3s;
 }
-
-nav .nav-link:hover,nav .nav-link.active {
-  color: #0d6efd;
-}
-
+nav .nav-link:hover,
+nav .nav-link.active { color: #0d6efd; }
 .nav-link::after {
   content: "";
   position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 2px;
-  width: 0%;
+  bottom: 0; left: 0;
+  height: 2px; width: 0;
   background-color: #0d6efd;
   transition: width 0.3s ease-in-out;
 }
-
-.nav-link:hover::after {
-  width: 100%;
-}
+.nav-link:hover::after { width: 100%; }
 
 header.hero {
   background-color: #212529;
-  color: white;
+  color: #fff;
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding: 0 2rem;
-  text-align: left;
+  justify-content: center;
+  padding: 100px 2rem 0;
+  text-align: center;
+  position: relative; z-index: 1;
 }
-
-header.hero .intro-text {
-  max-width: 600px;
-}
-
+header.hero .intro-text { max-width: 600px; }
 header.hero h1 {
   font-weight: 700;
   font-size: 3.5rem;
   margin-bottom: 1rem;
 }
-
-header.hero h1 span {
-  color: #0d6efd;
-}
-
+header.hero h1 span { color: #0d6efd; }
 header.hero p {
   font-size: 1.3rem;
   margin-bottom: 2rem;
@@ -77,35 +60,28 @@ header.hero p {
 
 .btn-custom {
   background-color: #0d6efd;
-  color: white;
+  color: #fff;
   border-radius: 50px;
   padding: 0.6rem 2.2rem;
   font-weight: 600;
   transition: background-color 0.3s ease;
   border: none;
 }
-
-.btn-custom:hover {
-  background-color: #084cdf;
-  color: white;
-}
+.btn-custom:hover { background-color: #084cdf; }
 
 section {
   padding: 4rem 0;
 }
-
 section h2 {
   font-weight: 700;
   margin-bottom: 2rem;
   text-align: center;
   position: relative;
 }
-
 section h2::after {
   content: "";
   display: block;
-  width: 60px;
-  height: 3px;
+  width: 60px; height: 3px;
   background: #0d6efd;
   margin: 8px auto 0;
   border-radius: 2px;
@@ -120,127 +96,97 @@ section h2::after {
   color: #444;
 }
 
+/* Education cards */
 .edu-card {
-  background-color: white;
+  background: #fff;
   border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   margin-bottom: 2rem;
 }
-
 .edu-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
 }
-
 .edu-card-header {
   background: #6f42c1;
-  color: white;
+  color: #fff;
   font-weight: 600;
   padding: 1rem 1.5rem;
-  font-size: 1.1rem;
   display: flex;
   align-items: center;
   gap: 10px;
 }
-
 .edu-card-body {
   padding: 1.5rem;
 }
+.edu-card-body h5 { font-weight: 600; margin-bottom: 0.5rem; }
+.edu-card-body p { margin-bottom: 0.5rem; color: #444; }
 
-.edu-card-body h5 {
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-}
-
-.edu-card-body p {
-  margin-bottom: 0.5rem;
-  color: #444;
-}
-
+/* Timeline */
 .timeline {
   position: relative;
   margin: 2rem 0;
   padding: 0;
 }
-
 .timeline::before {
   content: '';
   position: absolute;
-  top: 0;
-  bottom: 0;
+  top: 0; bottom: 0;
   left: 50%;
   width: 4px;
   background: #000033;
   transform: translateX(-50%);
 }
-
 .timeline-item {
   position: relative;
   margin-bottom: 3rem;
   width: 100%;
 }
-
 .timeline-item::before {
   content: '\f0b1';
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   position: absolute;
-  top: 0;
-  left: 50%;
-  background: white;
+  top: 0; left: 50%;
+  background: #fff;
   color: #000033;
   border: 3px solid #0d6efd;
   border-radius: 50%;
-  width: 36px;
-  height: 36px;
+  width: 36px; height: 36px;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: center; justify-content: center;
   transform: translate(-50%, -50%);
   z-index: 1;
 }
-
-.timeline-item.left .timeline-content {
-  width: 45%;
-  padding: 1rem;
-  position: relative;
-  left: 0;
-  margin-left: 0;
-  border-radius: 10px;
-}
-
+.timeline-item.left .timeline-content,
 .timeline-item.right .timeline-content {
   width: 45%;
   padding: 1rem;
-  position: relative;
-  right: 0;
-  margin-left: auto;
   border-radius: 10px;
+  position: relative;
 }
+.timeline-item.left .timeline-content { left: 0; margin-left: 0; }
+.timeline-item.right .timeline-content { right: 0; margin-left: auto; }
 
+/* Projects */
 #projects .card {
   border-radius: 12px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   margin-bottom: 2rem;
 }
-
 #projects .card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
 }
+#projects .card-body h5 { font-weight: 600; }
 
-#projects .card-body h5 {
-  font-weight: 600;
-}
+/* Contact form */
+#contact form { max-width: 600px; margin: 0 auto; }
 
-#contact form {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
+/* Footer */
 footer {
   background: #212529;
   color: #bbb;
@@ -249,89 +195,70 @@ footer {
   font-size: 0.9rem;
 }
 
+/* Profile picture wrapper */
 .profile-pic-wrapper {
   position: relative;
-  display: inline-block;
-  margin-bottom: 2rem;
+  width: 250px; height: 250px;
+  margin: 0 auto 1.5rem;
 }
-
 .profile-pic-wrapper::before {
   content: "";
   position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 380px;
-  height: 380px;
+  top: 50%; left: 50%;
+  width: 270px; height: 270px;
   transform: translate(-50%, -50%);
   border-radius: 50%;
   border: 4px solid #0d6efd;
   animation: rotateBorder 5s linear infinite;
   z-index: 0;
 }
-
 .profile-pic-wrapper img {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  max-width: 350px;
+  position: relative; z-index: 1;
+  width: 100%; height: 100%;
   border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
 }
-
 @keyframes rotateBorder {
-  0% {
-    transform: translate(-50%, -50%) rotate(0deg);
-  }
-  100% {
-    transform: translate(-50%, -50%) rotate(360deg);
-  }
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
 }
 
-/* Mobile Responsive */
-@media (max-width: 768px) {
-  header.hero {
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    padding: 2rem 1rem;
-  }
+/* Hover effects */
+.card, .edu-card {
+  transition: transform 0.3s cubic-bezier(.4,2,.3,1), box-shadow 0.3s cubic-bezier(.4,2,.3,1);
+}
+.card:hover, .edu-card:hover {
+  transform: translateY(-12px) scale(1.04);
+  box-shadow: 0 14px 30px rgba(33,150,243,0.10), 0 3px 6px rgba(0,0,0,0.03);
+}
+.timeline-content {
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.timeline-content:hover {
+  box-shadow: 0 8px 24px rgba(33,150,243,0.20);
+  transform: scale(1.03);
+}
 
-  header.hero h1 {
-    font-size: 2.2rem;
-  }
+/* Focus glow */
+input:focus, textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #0d6efd33;
+  border-color: #0d6efd;
+}
 
-  header.hero p {
-    font-size: 1.1rem;
-  }
-
-  .intro-text {
-    max-width: 100%;
-  }
-
-  .profile-pic-wrapper::before {
-    width: 250px;
-    height: 250px;
-  }
-
-  .timeline::before {
-    left: 8px;
-  }
-
-  .timeline-item.left .timeline-content,
-  .timeline-item.right .timeline-content {
-    width: 100%;
-    margin-left: 2.5rem;
-  }
-
-  .timeline-item::before {
-    left: 0;
-    transform: translateY(-50%);
-  }
-
-  .edu-card {
-    margin: 1rem 1rem;
-  }
-
-  section {
-    padding: 2rem 1rem;
-  }
+/* Responsive tweaks */
+@media (max-width: 575px) {
+  .profile-pic-wrapper { width:200px; height:200px; margin-top:70px; }
+  .profile-pic-wrapper::before { width:220px; height:220px; }
+  header.hero { padding-top:130px; }
+  header.hero h1 { font-size:2.2rem; }
+  header.hero p { font-size:1rem; }
+}
+@media (max-width: 375px) {
+  .profile-pic-wrapper { width:150px; height:150px; }
+  .profile-pic-wrapper::before { width:170px; height:170px; }
+  header.hero { padding-top:140px; }
+  header.hero h1 { font-size:2rem; }
+  header.hero p { font-size:0.95rem; }
 }

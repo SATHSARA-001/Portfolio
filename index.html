@@ -1,26 +1,28 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Sathsara Portfolio</title>
+  <!-- Bootstrap & Fonts -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-
-  <link rel="stylesheet" href="style.css"> 
-  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- AOS & Animate.css & Custom CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" data-aos="fade-down" data-aos-duration="800">
     <div class="container">
-      <img src="images/logo.png" alt="Logo" height="50" width="50" />
-      <a class="navbar-brand" href="#">Sathsara Dharmarathna</a>
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="images/logo.png" alt="Sathsara Logo" height="40" width="40" class="me-2" />
+        Sathsara Dharmarathna
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -37,361 +39,305 @@
     </div>
   </nav>
 
-  <header class="hero">
-    <div class="intro-text" style="margin-left: 30px;">
-      <h1>Hi, I'm <span>Sathsara</span></h1>
-      <p>Senior Mobile Engineer | 5y+ Experienced | iOS | Swift | Objective-C | UIKit | Xamarin</p>
-      <a href="Documents/Sathsara Maduranga.pdf" class="btn btn-custom" download>Download CV</a>
-
-      <a href="#about" class="btn btn-custom" id="exploreBtn">Explore More ↓</a>
-
+  <header class="hero py-5" data-aos="fade-down" data-aos-duration="800">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-12 col-md-4 text-center mb-4">
+          <div class="profile-pic-wrapper" data-aos="zoom-in" data-aos-duration="1000">
+            <img src="Images/profile.jpeg" alt="Profile" class="img-fluid shadow-lg rounded-circle" />
+          </div>
+        </div>
+        <div class="col-12 col-md-8">
+          <div class="intro-text text-center text-md-start px-3 px-md-0" data-aos="fade-left" data-aos-duration="1000">
+            <h1>Hi, I'm <span>Sathsara</span></h1>
+            <p class="mb-4">Senior Mobile Engineer | 5y+ Experienced | iOS | Swift | Objective-C | UIKit | Xamarin</p>
+            <a href="Documents/sathsara_maduranga.pdf" class="btn btn-custom me-2 mb-2" download>Download CV</a>
+            <a href="#about" class="btn btn-custom mb-2" id="exploreBtn">Explore More ↓</a>
+          </div>
+        </div>
+      </div>
     </div>
-
- <div class="col-md-4 text-center" style="margin-left: 40px;">
-  <div class="profile-pic-wrapper position-relative">
-    <img src="Images/profile.jpeg" alt="Profile"
-         class="img-fluid shadow-lg"
-         style="width: 350px; height: 350px; border-radius: 50%; object-fit: cover;" />
-  </div>
-</div>
-
-
-
-</div>
-
   </header>
 
-  <section id="about" class="bg-white">
-    <h2>About Me</h2>
-    <p>Software Engineer with well-honed skills in computer science and excellent Communication skills. Experienced in iOS development and
-deployment, seeking an IOS Developer position to utilize my expertise and support using agile development Methodologies in a fast-growing organization. 
-<p>Accomplished in designing highly Complex features and applications in the iOS platform. Skilled in delivering efficient, Highquality 
-solutions with a passion for problem-solving and customer satisfaction.</p>
-    </p>
+  <section id="about" class="bg-white py-5" data-aos="fade-up" data-aos-duration="800">
+    <div class="container">
+      <h2 class="text-center mb-4">About Me</h2>
+      <p class="lead text-justify">
+        Software Engineer with well-honed skills in computer science and excellent communication skills. Experienced in iOS development and deployment, seeking an iOS Developer position to utilize my expertise and support using agile development methodologies in a fast-growing organization.
+      </p>
+      <p class="lead text-justify">
+        Accomplished in designing highly complex features and applications in the iOS platform. Skilled in delivering efficient, high-quality solutions with a passion for problem-solving and customer satisfaction.
+      </p>
+    </div>
   </section>
 
- <section id="skills" class="bg-light py-5">
-  <div class="container px-5">
-    <h2 class="text-center mb-4">Skills</h2>
-    <div class="row text-center g-4">
-
-      <div class="col-6 col-md-3">
-        <div class="card border-0 shadow-sm py-3">
-          <i class="fas fa-mobile-alt fa-3x text-info mb-2"></i>
-          <h5 class="mb-0">Xamarin (iOS/Android)</h5>
-        </div>
-      </div>
-
-      <div class="col-6 col-md-3">
-        <div class="card border-0 shadow-sm py-3">
-          <i class="fas fa-code fa-3x text-secondary mb-2"></i>
-          <h5 class="mb-0">Objective C</h5>
-        </div>
-      </div>
-
-      <div class="col-6 col-md-3">
-        <div class="card border-0 shadow-sm py-3">
-          <i class="fab fa-swift fa-3x text-danger mb-2"></i>
-          <h5 class="mb-0">Swift</h5>
-        </div>
-      </div>
-
-      <div class="col-6 col-md-3">
-        <div class="card border-0 shadow-sm py-3">
-          <i class="fas fa-paint-brush fa-3x text-primary mb-2"></i>
-          <h5 class="mb-0">UIKit</h5>
-        </div>
-      </div>
-
-      <div class="col-6 col-md-3">
-        <div class="card border-0 shadow-sm py-3">
-          <i class="fas fa-sync-alt fa-3x text-purple mb-2"></i>
-          <h5 class="mb-0">RxSwift</h5>
-        </div>
-      </div>
-      
-      <div class="col-6 col-md-3">
-        <div class="card border-0 shadow-sm py-3">
-          <i class="fab fa-git-alt fa-3x text-danger mb-2"></i>
-          <h5 class="mb-0">Version Control</h5>
-        </div>
-      </div>
-
-
-      <div class="col-6 col-md-3">
-        <div class="card border-0 shadow-sm py-3">
-          <i class="fas fa-file-code fa-3x text-warning mb-2"></i>
-          <h5 class="mb-0">Swagger</h5>
-        </div>
-      </div>
-
-      <div class="col-6 col-md-3">
-        <div class="card border-0 shadow-sm py-3">
-          <i class="fas fa-fire fa-3x text-danger mb-2"></i>
-          <h5 class="mb-0">Firebase</h5>
-        </div>
-      </div>
-
-        <div class="col-6 col-md-3">
-        <div class="card border-0 shadow-sm py-3">
-          <i class="fas fa-box-open fa-3x text-success mb-2"></i>
-          <h5 class="mb-0">Dependency Management (CocoPod)</h5>
-        </div>
-      </div>
-
-      
-      <div class="col-6 col-md-3">
-  <div class="card border-0 shadow-sm py-3">
-    <i class="fas fa-bell fa-3x text-info mb-2"></i>
-    <h5 class="mb-0">MVVM/MVC Architecture & Push Notifications</h5>
-  </div>
-</div>
- </div>
-   </div>
-  </section>
-
-  <section id="education" style="background-color: #e9f0ff; padding: 60px 20px;">
-  <div class="container">
-    <h2 class="text-center mb-5">
-      <i class="fas fa-graduation-cap"></i>
-      <span style="color: black;">Education</span>
-    </h2>
-
-    <div class="row g-4 justify-content-center">
-      <div class="col-md-6">
-        <div class="edu-card">
-          <div class="edu-card-header bg-primary">
-            <i class="fas fa-user-graduate"></i>
-            Bachelor of Computing
-          </div>
-          <div class="edu-card-body">
-            <h5 class="text-primary">Coventry University UK</h5>
-            <p><strong>2019-2021 First Class Honors 3.5 GPA</strong></p>
+  <section id="skills" class="bg-light py-5" data-aos="fade-up" data-aos-duration="800">
+    <div class="container px-5">
+      <h2 class="text-center mb-4" data-aos="zoom-in" data-aos-delay="100">Skills</h2>
+      <div class="row text-center g-4">
+        <div class="col-6 col-md-3" data-aos="flip-left" data-aos-delay="100">
+          <div class="card border-0 shadow-sm py-3">
+            <i class="fas fa-mobile-alt fa-3x text-info mb-2"></i>
+            <h5 class="mb-0">Xamarin (iOS/Android)</h5>
           </div>
         </div>
-      </div>
-
-      <div class="col-md-6">
-        <div class="edu-card">
-          <div class="edu-card-header bg-primary">
-            <i class="fas fa-university"></i>
-            Diploma in Computer System Design
+        <div class="col-6 col-md-3" data-aos="flip-left" data-aos-delay="200">
+          <div class="card border-0 shadow-sm py-3">
+            <i class="fas fa-code fa-3x text-secondary mb-2"></i>
+            <h5 class="mb-0">Objective C</h5>
           </div>
-          <div class="edu-card-body">
-            <h5 class="text-primary">National Institute of Business Management</h5>
-            <p><strong>2016-2017 3.78 GPA</strong></p>
+        </div>
+        <div class="col-6 col-md-3" data-aos="flip-left" data-aos-delay="300">
+          <div class="card border-0 shadow-sm py-3">
+            <i class="fab fa-swift fa-3x text-danger mb-2"></i>
+            <h5 class="mb-0">Swift</h5>
+          </div>
+        </div>
+        <div class="col-6 col-md-3" data-aos="flip-left" data-aos-delay="400">
+          <div class="card border-0 shadow-sm py-3">
+            <i class="fas fa-paint-brush fa-3x text-primary mb-2"></i>
+            <h5 class="mb-0">UIKit</h5>
+          </div>
+        </div>
+        <div class="col-6 col-md-3" data-aos="flip-left" data-aos-delay="500">
+          <div class="card border-0 shadow-sm py-3">
+            <i class="fas fa-sync-alt fa-3x text-purple mb-2"></i>
+            <h5 class="mb-0">RxSwift</h5>
+          </div>
+        </div>
+        <div class="col-6 col-md-3" data-aos="flip-left" data-aos-delay="600">
+          <div class="card border-0 shadow-sm py-3">
+            <i class="fab fa-git-alt fa-3x text-danger mb-2"></i>
+            <h5 class="mb-0">Version Control</h5>
+          </div>
+        </div>
+        <div class="col-6 col-md-3" data-aos="flip-left" data-aos-delay="700">
+          <div class="card border-0 shadow-sm py-3">
+            <i class="fas fa-file-code fa-3x text-warning mb-2"></i>
+            <h5 class="mb-0">Swagger</h5>
+          </div>
+        </div>
+        <div class="col-6 col-md-3" data-aos="flip-left" data-aos-delay="800">
+          <div class="card border-0 shadow-sm py-3">
+            <i class="fas fa-fire fa-3x text-danger mb-2"></i>
+            <h5 class="mb-0">Firebase</h5>
+          </div>
+        </div>
+        <div class="col-6 col-md-3" data-aos="flip-left" data-aos-delay="900">
+          <div class="card border-0 shadow-sm py-3">
+            <i class="fas fa-box-open fa-3x text-success mb-2"></i>
+            <h5 class="mb-0">CocoPod</h5>
+          </div>
+        </div>
+        <div class="col-6 col-md-3" data-aos="flip-left" data-aos-delay="1000">
+          <div class="card border-0 shadow-sm py-3">
+            <i class="fas fa-bell fa-3x text-info mb-2"></i>
+            <h5 class="mb-0">MVVM/MVC & Push Notifications</h5>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="experience" class="py-5">
-  <div class="container">
-    <h2 class="text-center mb-5"><i class="bi bi-briefcase-fill"></i> Experiences</h2>
-    <div class="timeline">
-
-      <div class="timeline-item left">
-        <div class="timeline-content text-light rounded shadow-sm" style="background-color: #5195fd;">
-          <h5 class="title" style="font-weight: bold;">Senior Software Engineer IOS|Android</h5>
-          <p class="mb-1" style="font-weight:bold">IFS R&D International Pvt Ltd</p>
-          <p>Developed iOS & Android applications using Xamarin and successfully released test flights and App Store & Play store versions.</p>
-          <small>2024 April - Present</small>
+  <section id="education" style="background-color: #e9f0ff; padding: 60px 20px;" data-aos="fade-up" data-aos-duration="800">
+    <div class="container">
+      <h2 class="text-center mb-5" data-aos="zoom-in" data-aos-delay="100">
+        <i class="fas fa-graduation-cap"></i>
+        Education
+      </h2>
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-6" data-aos="fade-right" data-aos-delay="200">
+          <div class="edu-card">
+            <div class="edu-card-header bg-primary">
+              <i class="fas fa-user-graduate"></i>
+              Bachelor of Computing
+            </div>
+            <div class="edu-card-body">
+              <h5 class="text-primary">Coventry University UK</h5>
+              <p><strong>2019-2021 First Class Honors</strong></p>
+              <p>3.5 GPA</p>
+            </div>
+          </div>
         </div>
-      </div>
-
-      <div class="timeline-item right">
-        <div class="timeline-content text-light rounded shadow-sm" style="background-color: #5195fd;">
-          <h5 class="title" style="font-weight: bold;">Senior Software Engineer - IOS</h5>
-          <p class="mb-1" style="font-weight:bold">iCan Lanka Pvt Ltd</p>
-          <p>Developed iOS applications using Objective-C and Swift, with key features such as wallet and chat functionality, 
-            and successfully released test flights and AppStore versions.</p>
-          <small>2022 Sep - 2024 Apr</small>
-        </div>
-      </div>
-
-      <div class="timeline-item left">
-        <div class="timeline-content text-light rounded shadow-sm" style="background-color: #5195fd;">
-          <h5 class="title" style="font-weight: bold;">Software Engineer - IOS </h5>
-          <p class="mb-1"style="font-weight:bold">Proitzen Australia | WFH</p>
-          <p>Developed a child monitoring application using Swift, 
-            resulting in improved user experience and increased customer satisfaction.</p>
-          <small>2022 Jun - 2022 Sep</small>
-        </div>
-      </div>
-
-      <div class="timeline-item right">
-        <div class="timeline-content text-light rounded shadow-sm" style="background-color: #5195fd;">
-          <h5 class="title" style="font-weight: bold;">Associate Software Engineer - IOS</h5>
-          <p class="mb-1"style="font-weight:bold">Elegant Media Pvt Ltd</p>
-          <p>Monitor a team of 7 to 9 software engineers. Our project managers were Australian team 
-            so in sri lanka we worked similarly to the project managers role. Also developed the ios
-            applications using Swift and Swiftui. Release apps to the app store.</p>
-          <small>2020 May - 2022 Jun</small>
-        </div>
-      </div>
-
-      <div class="timeline-item left">
-        <div class="timeline-content text-light rounded shadow-sm" style="background-color: #5195fd;">
-          <h5 class="title" style="font-weight: bold;">Customer Support Engineer</h5>
-          <p class="mb-1" style="font-weight:bold">Epic Lanka Pvt Ltd</p>
-          <small>2019 May - 2020 Apr</small>
-        </div>
-      </div>
-
-       <div class="timeline-item right">
-        <div class="timeline-content text-light rounded shadow-sm" style="background-color: #5195fd;">
-          <h5 class="title" style="font-weight: bold;">Application Support Engineer</h5>
-          <p class="mb-1" style="font-weight:bold">Codefix Solutions Pvt Ltd</p>
-          <small>2018 Sep -2019 May</small>
+        <div class="col-md-6" data-aos="fade-left" data-aos-delay="300">
+          <div class="edu-card">
+            <div class="edu-card-header bg-primary">
+              <i class="fas fa-university"></i>
+              Diploma in Computer System Design
+            </div>
+            <div class="edu-card-body">
+              <h5 class="text-primary">National Institute of Business Management</h5>
+              <p><strong>2016-2017</strong></p>
+              <p>3.78 GPA</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
+  <section id="experience" class="py-5" data-aos="fade-up" data-aos-duration="800">
+    <div class="container">
+      <h2 class="text-center mb-5" data-aos="zoom-in" data-aos-delay="100"><i class="bi bi-briefcase-fill"></i> Experiences</h2>
+      <div class="timeline">
+        <div class="timeline-item left" data-aos="fade-right" data-aos-delay="200">
+          <div class="timeline-content text-light rounded shadow-sm" style="background-color: #5195fd;">
+            <h5 class="title">Senior Software Engineer IOS|Android</h5>
+            <p class="mb-1"><strong>IFS R&D International Pvt Ltd</strong></p>
+            <p>Developed iOS & Android apps using Xamarin; released to TestFlight, App Store & Play Store.</p>
+            <small>2024 April - Present</small>
+          </div>
+        </div>
+        <div class="timeline-item right" data-aos="fade-left" data-aos-delay="300">
+          <div class="timeline-content text-light rounded shadow-sm" style="background-color: #5195fd;">
+            <h5 class="title">Senior Software Engineer - IOS</h5>
+            <p class="mb-1"><strong>iCan Lanka Pvt Ltd</strong></p>
+            <p>Built iOS features in Objective-C & Swift (wallet, chat); released via TestFlight & App Store.</p>
+            <small>2022 Sep - 2024 Apr</small>
+          </div>
+        </div>
+        <div class="timeline-item left" data-aos="fade-right" data-aos-delay="400">
+          <div class="timeline-content text-light rounded shadow-sm" style="background-color: #5195fd;">
+            <h5 class="title">Software Engineer - IOS</h5>
+            <p class="mb-1"><strong>Proitzen Australia | WFH</strong></p>
+            <p>Created a child monitoring app in Swift; improved UX & customer satisfaction.</p>
+            <small>2022 Jun - 2022 Sep</small>
+          </div>
+        </div>
+        <div class="timeline-item right" data-aos="fade-left" data-aos-delay="500">
+          <div class="timeline-content text-light rounded shadow-sm" style="background-color: #5195fd;">
+            <h5 class="title">Associate Software Engineer - IOS</h5>
+            <p class="mb-1"><strong>Elegant Media Pvt Ltd</strong></p>
+            <p>Led team of 7–9 engineers; built Swift & SwiftUI apps; released to App Store.</p>
+            <small>2020 May - 2022 Jun</small>
+          </div>
+        </div>
+        <div class="timeline-item left" data-aos="fade-right" data-aos-delay="600">
+          <div class="timeline-content text-light rounded shadow-sm" style="background-color: #5195fd;">
+            <h5 class="title">Customer Support Engineer</h5>
+            <p class="mb-1"><strong>Epic Lanka Pvt Ltd</strong></p>
+            <small>2019 May - 2020 Apr</small>
+          </div>
+        </div>
+        <div class="timeline-item right" data-aos="fade-left" data-aos-delay="700">
+          <div class="timeline-content text-light rounded shadow-sm" style="background-color: #5195fd;">
+            <h5 class="title">Application Support Engineer</h5>
+            <p class="mb-1"><strong>Codefix Solutions Pvt Ltd</strong></p>
+            <small>2018 Sep - 2019 May</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <section id="projects" class="bg-white">
-    <h2>Projects</h2>
-    <div class="container px-4">
-      <div class="row row-cols-1 row-cols-md-2 g-4">
-        <div class="col">
-          <div class="card h-100">
+  <section id="projects" class="bg-white py-5" data-aos="fade-up" data-aos-duration="800">
+    <div class="container px-3 px-md-5">
+      <h2 class="text-center mb-5" data-aos="zoom-in" data-aos-delay="100">Projects</h2>
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        <div class="col" data-aos="zoom-in-up" data-aos-delay="200">
+          <div class="card h-100 shadow-sm">
             <div class="card-body d-flex flex-column">
               <h5 class="card-title">iCan Meta - In App Store</h5>
-              <p>There are many variations of passages of Lorem Ipsum available, 
-                but the majority have suffered alteration in some form, by injected humour, 
-                or randomised words which don't look even slightly believable.</p>
-              <p class="card-text flex-grow-1"> </p>
-              <a href="#" class="btn btn-outline-primary mt-auto align-self-start">View Project</a>
+              <p class="card-text">Custom enterprise app for metadata management and analytics.</p>
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="card h-100">
+        <div class="col" data-aos="zoom-in-up" data-aos-delay="300">
+          <div class="card h-100 shadow-sm">
             <div class="card-body d-flex flex-column">
-              <h5 class="card-title">iCan Chat- In App Store</h5>
-              <p>There are many variations of passages of Lorem Ipsum available, 
-                but the majority have suffered alteration in some form, by injected humour, 
-                or randomised words which don't look even slightly believable.</p>
-              <p class="card-text flex-grow-1"></p>
-              <a href="#" class="btn btn-outline-primary mt-auto align-self-start">View Project</a>
+              <h5 class="card-title">iCan Chat - In App Store</h5>
+              <p class="card-text">Secure messaging platform with multimedia support.</p>
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="card h-100">
+        <div class="col" data-aos="zoom-in-up" data-aos-delay="400">
+          <div class="card h-100 shadow-sm">
             <div class="card-body d-flex flex-column">
               <h5 class="card-title">Pnut - In App Store</h5>
-              <p>There are many variations of passages of Lorem Ipsum available, 
-                but the majority have suffered alteration in some form, by injected humour,
-                 or randomised words which don't look even slightly believable.</p>
-              <p class="card-text flex-grow-1"></p>
-              <a href="#" class="btn btn-outline-primary mt-auto align-self-start">View Project</a>
+              <p class="card-text">Social network for quick polls and discussions.</p>
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="card h-100">
+        <div class="col" data-aos="zoom-in-up" data-aos-delay="500">
+          <div class="card h-100 shadow-sm">
             <div class="card-body d-flex flex-column">
               <h5 class="card-title">Dosha - In App Store</h5>
-              <p>There are many variations of passages of Lorem Ipsum available, 
-                but the majority have suffered alteration in some form, by injected humour, 
-                or randomised words which don't look even slightly believable.</p>
-              <p class="card-text flex-grow-1"></p>
-              <a href="#" class="btn btn-outline-primary mt-auto align-self-start">View Project</a>
+              <p class="card-text">Health tracking app based on Ayurvedic principles.</p>
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="card h-100">
+        <div class="col" data-aos="zoom-in-up" data-aos-delay="600">
+          <div class="card h-100 shadow-sm">
             <div class="card-body d-flex flex-column">
               <h5 class="card-title">Teacher M8 - In App Store</h5>
-              <p>There are many variations of passages of Lorem Ipsum available, 
-                but the majority have suffered alteration in some form, by injected humour, 
-                or randomised words which don't look even slightly believable.</p>
-              <p class="card-text flex-grow-1"></p>
-              <a href="#" class="btn btn-outline-primary mt-auto align-self-start">View Project</a>
+              <p class="card-text">Educational tool for classroom management.</p>
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </section>
 
-  <section id="contact" class="bg-light py-5">
-  <div class="container">
-    <h2 class="text-center mb-4">Get In Touch</h2>
-    <div class="row">
-      
-      <div class="col-md-5 mb-4">
-        <div class="p-4 bg-white shadow rounded h-100">
-          <h5><i class="fas fa-phone-alt me-2 mb-2" style="font-size: 0.8em;"></i>Phone</h5>
-          <p>+94 760128833</p>
-
-          <h5><i class="fas fa-envelope me-2 mb-2" style="font-size: 0.8em;"></i>Email</h5>
-          <p class="mb-4">sathsaramadurangad@gmail.com</p>
-
-          <a href="https://github.com/" target="_blank" class="btn rounded-circle" style="background-color: #000; color: white; width: 40px; height: 40px;">
-    <i class="bi bi-github"></i>
-  </a>
-  
-  <a href="https://linkedin.com/in/" target="_blank" class="btn rounded-circle" style="background-color: #0A66C2; color: white; width: 40px; height: 40px;">
-    <i class="bi bi-linkedin"></i>
-  </a>
-
-  <a href="https://sathsaramaduranga.blogspot.com/" target="_blank" class="btn rounded-circle" style="background-color: #F57D00; color: white; width: 40px; height: 40px;">
-    <i class="fab fa-blogger-b"></i>
-  </a>
-
-
+  <section id="contact" class="bg-light py-5" data-aos="fade-up" data-aos-duration="800">
+    <div class="container">
+      <h2 class="text-center mb-5">Get In Touch</h2>
+      <div class="row g-4">
+        <div class="col-12 col-md-5" data-aos="fade-right" data-aos-delay="200">
+          <div class="p-4 bg-white shadow rounded h-100">
+            <h5><i class="fas fa-phone-alt me-2"></i>Phone</h5>
+            <p class="mb-3">+94 760128833</p>
+            <h5><i class="fas fa-envelope me-2"></i>Email</h5>
+            <p class="mb-4">sathsaramadurangad@gmail.com</p>
+            <div class="d-flex gap-2">
+              <a href="https://github.com/SATHSARA-001/" target="_blank" class="btn rounded-circle" style="background:#000;color:#fff;width:40px;height:40px;">
+                <i class="bi bi-github"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/sathsara-dharmarathna" target="_blank" class="btn rounded-circle" style="background:#0A66C2;color:#fff;width:40px;height:40px;">
+                <i class="bi bi-linkedin"></i>
+              </a>
+              <a href="https://sathsaramaduranga.blogspot.com/" target="_blank" class="btn rounded-circle" style="background:#F57D00;color:#fff;width:40px;height:40px;">
+                <i class="fab fa-blogger-b"></i>
+              </a>
+              <a href="https://medium.com/@sathsaramadurangad.d" target="_blank" class="btn rounded-circle" style="background:#12100E;color:#fff;width:40px;height:40px;">
+                <i class="fab fa-medium-m"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-7" data-aos="fade-left" data-aos-delay="400">
+          <form action="#" class="p-4 bg-white shadow rounded">
+            <div class="mb-3"><input type="text" class="form-control" placeholder="Your Name" required /></div>
+            <div class="mb-3"><input type="email" class="form-control" placeholder="Your Email" required /></div>
+            <div class="mb-3"><textarea class="form-control" rows="4" placeholder="Your Message" required></textarea></div>
+            <button type="submit" class="btn btn-custom w-100">Send Message</button>
+          </form>
         </div>
       </div>
-
-      <div class="col-md-7">
-        <form action="#" class="p-4 bg-white shadow rounded">
-          <div class="mb-3">
-            <input type="text" class="form-control" placeholder="Your Name" required />
-          </div>
-          <div class="mb-3">
-            <input type="email" class="form-control" placeholder="Your Email" required />
-          </div>
-          <div class="mb-3">
-            <textarea class="form-control" rows="4" placeholder="Your Message" required></textarea>
-          </div>
-          <button type="submit" class="btn btn-custom w-100">Send Message</button>
-        </form>
-      </div>
-
     </div>
-  </div>
-</section>
+  </section>
 
-
-    <footer class="bg-dark pt-4 pb-2">
+  <footer class="bg-dark text-white pt-4 pb-3" data-aos="fade-up" data-aos-duration="800">
     <div class="container text-center">
-      <p class="mb-3">&copy;2025 Sathsara Dharmarathna. All rights reserved.</p>
-      <div class="d-flex justify-content-center gap-3">
-        <a href="https://github.com/" target="_blank" class="btn rounded-circle" style="background-color: #000; color: white; width: 40px; height: 40px;">
-    <i class="bi bi-github"></i>
-  </a>
-  
-  <a href="https://linkedin.com/in/" target="_blank" class="btn rounded-circle" style="background-color: #0A66C2; color: white; width: 40px; height: 40px;">
-    <i class="bi bi-linkedin"></i>
-  </a>
-
-  <a href="https://sathsaramaduranga.blogspot.com/" target="_blank" class="btn rounded-circle" style="background-color: #F57D00; color: white; width: 40px; height: 40px;">
-    <i class="fab fa-blogger-b"></i>
-  </a>
+      <p class="mb-3 small">&copy; 2025 Sathsara Dharmarathna. All rights reserved.</p>
+      <div class="d-flex justify-content-center gap-3 flex-wrap">
+        <a href="https://github.com/SATHSARA-001/" class="btn rounded-circle" style="background:#000;color:#fff;width:40px;height:40px;">
+          <i class="bi bi-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/sathsara-dharmarathna" class="btn rounded-circle" style="background:#0A66C2;color:#fff;width:40px;height:40px;">
+          <i class="bi bi-linkedin"></i>
+        </a>
+        <a href="https://sathsaramaduranga.blogspot.com/" class="btn rounded-circle" style="background:#F57D00;color:#fff;width:40px;height:40px;">
+          <i class="fab fa-blogger-b"></i>
+        </a>
+        <a href="https://medium.com/@sathsaramadurangad.d" class="btn rounded-circle" style="background:#12100E;color:#fff;width:40px;height:40px;">
+          <i class="fab fa-medium-m"></i>
+        </a>
       </div>
     </div>
   </footer>
 
- 
-
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="script.js"></script>
 </body>
-
 </html>
